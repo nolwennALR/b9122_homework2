@@ -40,6 +40,7 @@ headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537
 press_release_urls = []
 press_release_texts = []
 press_release_titles = []
+press_release_html = []
 
 # Step 3: Choose number of URLs to extract (& visit)
 press_release_count = 0
@@ -104,7 +105,10 @@ while len(urls) > 0 and len(opened) < maxNumUrl:
                         
                         global press_release_count
                         press_release_count += 1
-                        print(f"Extracting Press Release {press_release_count}")
+                        
+                        # Extract entire html file
+                        html = soup.text
+                        press_release_html.append(html)
                         
                         # Add the text of the press release in list of press releases
                         press_release_texts.append(current_text)
@@ -131,6 +135,10 @@ for i in range(0,maxNumPressRelease):
     print("\nwith url = "+str(url))
     text_file = open(r'/Users/naa2195/Documents/1st Year/Computing for Business Research/Problem Sets/PS2/UN Press Releases/HW2_Q1_1_'+str(i+1)+'.txt', 'w')
     text_file.write(press_release_texts[i])
+    text_file.close()
+    # Save entire html file
+    text_file = open(r'/Users/naa2195/Documents/1st Year/Computing for Business Research/Problem Sets/PS2/UN Press Releases/HW2_Q1_1_html_'+str(i+1)+'.txt', 'w')
+    text_file.write(press_release_html[i])
     text_file.close()
     print("\nPress Release saved in txt format")
 
@@ -164,6 +172,7 @@ headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537
 press_release_urls = []
 press_release_texts = []
 press_release_titles = []
+press_release_html = []
 
 # Step 3: Choose number of URLs to extract (& visit)
 press_release_count = 0
@@ -245,7 +254,10 @@ while len(urls) > 0 and len(opened) < maxNumUrl:
                                 
                             global press_release_count
                             press_release_count += 1
-                            print(f"Extracting Press Release {press_release_count}")
+                            
+                            # Extract entire html file
+                            html = soup.text
+                            press_release_html.append(html)
                                 
                             # Add the text of the press release in list of press releases
                             press_release_texts.append(current_text)
@@ -262,14 +274,19 @@ while len(urls) > 0 and len(opened) < maxNumUrl:
                     print("######")
 
 # Step 7: Save in txt format
-for i in range(0,maxNumPressRelease):
+for i in range(0,15):
     print(press_release_urls[i])
     url = press_release_urls[i]
     title = press_release_titles[i]
     print("\n.Extracted Press Release "+str(title))
     print("\nwith url = "+str(url))
+    # Save text content
     text_file = open(r'/Users/naa2195/Documents/1st Year/Computing for Business Research/Problem Sets/PS2/EU Parliament Press Releases/HW2_Q1_2_'+str(i+1)+'.txt', 'w')
     text_file.write(press_release_texts[i])
+    text_file.close()
+    # Save entire html file
+    text_file = open(r'/Users/naa2195/Documents/1st Year/Computing for Business Research/Problem Sets/PS2/EU Parliament Press Releases/HW2_Q1_2_html_'+str(i+1)+'.txt', 'w')
+    text_file.write(press_release_html[i])
     text_file.close()
     print("\nPress Release saved in txt format")
 
