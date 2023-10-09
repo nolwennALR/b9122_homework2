@@ -2,6 +2,11 @@
 - Author: Nolwenn Allaire (naa2195)
 - October 9th, 2023
 
+-     \\_//
+      .''\__*
+         |   \
+         || ||
+
 # Web Crawler code to extract press releases - Computing for Business Research (Fall 2023)
 
 The repository consists in 3 parts: 
