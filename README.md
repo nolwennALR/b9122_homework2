@@ -1,8 +1,8 @@
 ## b9122_homework2
-## October 9th, 2023
+Author: Nolwenn Allaire, naa2195
+October 9th, 2023
 
-# Author: Nolwenn Allaire, naa2195
-Web Crawler code to extract press releases - Computing for Business Research Fall 2023
+# Web Crawler code to extract press releases - Computing for Business Research Fall 2023
 
 The repository consists in 3 parts: 
   1. The code: nolwenn_allaire_hw2.py, which contains a web crawler code to extract press releases from the UN Press Room and the EU Parliament Press Room, according to the following instructions:
