@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-
+ Made a modification to the file (instruction from pb 2 :) )
 
 SG/SM/21723
 
