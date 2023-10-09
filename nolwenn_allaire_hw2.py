@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 COMPUTING FOR BUSINESS RESEARCH
-Homework 2 - Due: October 9th
+Homework 2 - Due: October 9th, 2023
 
 @author: naa2195, Nolwenn Allaire
 
