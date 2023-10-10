@@ -89,7 +89,6 @@ while len(urls) > 0 and len(opened) < maxNumUrl:
                 response = requests.get(childUrl)
                 soup = BeautifulSoup(response.content, "html.parser")
                     
-                # Check if the page is a press release related to plenary sessions: 
                 # Check if well press release:
                 if soup.find('a', href=press_room_un, hreflang="en") is not None:
                     response = requests.get(childUrl)
@@ -131,7 +130,7 @@ for i in range(0,maxNumPressRelease):
     print(pr_urls[i])
     url = pr_urls[i]
     title = pr_titles[i]
-    print("\nExtracted Press Release "+str(title))
+    print("\n.Extracted Press Release "+str(title))
     print("\nwith url = "+str(url))
     text_file = open(r'/Users/naa2195/Documents/1st Year/Computing for Business Research/Problem Sets/PS2/to_zip/1_text_'+str(i+1)+'.txt', 'w')
     text_file.write(pr_texts[i])
@@ -278,7 +277,7 @@ for i in range(0,15):
     print(pr_urls[i])
     url = pr_urls[i]
     title = pr_titles[i]
-    print("\nExtracted Press Release "+str(title))
+    print("\n.Extracted Press Release "+str(title))
     print("\nwith url = "+str(url))
     # Save text content
     text_file = open(r'/Users/naa2195/Documents/1st Year/Computing for Business Research/Problem Sets/PS2/to_zip/2_text_'+str(i+1)+'.txt', 'w')
@@ -289,4 +288,5 @@ for i in range(0,15):
     text_file.write(pr_html[i])
     text_file.close()
     print("\nPress Release saved in txt format")
+
 
